@@ -1,7 +1,7 @@
 import gc
 
 class ExampleClass:
-    def __init__(self, name, value):
+    def __init__(self, name, value: int):
         self.name = name  # Public attribute
         self._value = value  # Protected attribute
         self.__secret = "This is private"  # Private attribute
@@ -46,7 +46,7 @@ class SubExampleClass(ExampleClass):
 # Example usage
 if __name__ == "__main__":
     # Create an object of the parent class
-    parent_obj = ExampleClass("ParentObject", 42)
+    parent_obj = ExampleClass("ParentObject", "42")
     print(parent_obj.public_method())
     print(parent_obj._protected_method())
     print(parent_obj.access_private_method())
